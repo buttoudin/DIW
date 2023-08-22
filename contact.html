@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="witdth=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="asset/css/style.css">
+    <title>jarditou</title>
+</head>
+
+<body>
+    <header>
+        <div class="entete">
+            <img src="asset/image/jarditou_logo.jpg" alt="logo jarditou">
+            <p>Tout le jardin</p>
+            <!-- une classe pour le header  -->
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Acceuil</a></li>
+                <li><a href="tableau.html">Tableau</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <!-- une class nav -->
+    </header>
+    <div class="promotion">
+        <img src="asset/image/promotion.jpg" alt="image promotionnelle jarditou" width="1700">
+    </div>
+    <p>*Ces zones sont obligatoires</p>
+    <form action="http://bienvu.net/script.php" method="get" id="coordonnées">
+        <div class="info">
+            <h3>Vos coordonnées</h3>
+            <label for="nom">Votre nom*:</label>
+            <input type="text" id="nom" name="nom"><br>
+            <span id="nomError"></span>
+
+            <label for="prenom">Votre prénom*:</label>
+            <input type="text" id="prenom">
+            <span id="prenomError"></span>
+
+            <p></p>
+
+            <fieldset>
+                <label for="genre">Sexe*:</label>
+                <input type="radio" id="genreF" name="genre" value="féminin">Féminin
+                <input type="radio" id="genreM" name="genre" value="masculin">Masculin
+            </fieldset>
+            <span id="genreError"></span>
+
+            <p></p>
+
+            <label for="date">Date de naissance*:</label>
+            <input type="date" id="date"><br>
+            <span id="dateError"></span>
+
+            <label for="postal">Code postal*:</label>
+            <input type="text" id="postal"><br>
+            <span id="postalError"></span>
+
+            <label for="adresse">Adresse:</label>
+            <input type="text" id="adresse"><br>
+
+            <label for="Ville">Ville:</label>
+            <input type="text" id="Ville"><br>
+
+            <label for="email">Email*:</label>
+            <input type="email" placeholder="dave.loper@afpa.fr" id="email">
+            <span id="emailError"></span>
+
+            <p></p>
+
+            <h3>Votre demande</h3>
+            <label for="sujet">Sujet*:</label>
+            <select id="sujet">
+                <option value="">--</option>
+                <option value="commandes">Mes commandes</option>
+                <option value="produit">Question sur un produit</option>
+                <option value="réclamation">Réclamation</option>
+                <option value="autres">Autres</option>
+            </select><br>
+            <span id="sujetError"></span>
+
+            <label for="question">Votre question*:</label>
+            <textarea name="question" id="question"></textarea>
+            <span id="questionError"></span>
+
+            <p></p>
+            <label for="accord"></label>
+            <input type="checkbox" id="accord" value="accord">*J'accepte le traitement informatique de ce formulaire<br>
+            <span id="accordError"></span>
+
+            <button>Envoyer</button>
+            <input type="reset" value="annuler">
+            
+        </div>
+    </form>
+
+    <footer>
+
+        <nav class="fin">
+            <ul>
+                <li><a href="#">Mention légales</a></li>
+                <li><a href="#">Horaires</a></li>
+                <li><a href="#">Plan du site</a></li>
+            </ul>
+        </nav>
+    </footer>
+    <script src="asset/javascript/jarditou.js" defer></script>
+</body>
+
+</html>

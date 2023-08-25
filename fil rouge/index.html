@@ -5,30 +5,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fil rouge</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 
 <body>
-    <div id="entete">
-        <div id="logo">
-            <img src="asset/image/images_the_district/the_district_brand/logo.png" alt="logo">
-        </div>
-        <div id="menu">
-            <ul>
-                <li><a href="index.html">Acceuil</a></li>
-                <li><a href="">Catégorie</a></li>
-                <li><a href="">Plats</a></li>
-                <li><a href="">Contact</a></li>
-            </ul>
+    <div class="container-fluid">
+        <div class="row row-cols-5">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <div class="col">
+                <a class="navbar-brand" href="#">
+
+                    <img src="asset/image/images_the_district/the_district_brand/logo.png" width="30" height="30"
+                        class="d-inline-block align-top" alt="">
+                </a>
+            </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarNavSupportedContent" aria-controls="navbarNavSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNavSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+
+                        <div class="col">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Acceuil <span class="sr-only"></span></a>
+                        </li>
+                    </div>
+                    <div class="col">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">catégorie</a>
+                        </li>
+                    </div>
+                    <div class="col">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Plats</a>
+                        </li>
+                    </div>
+                    <div class="col"> 
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </div>
+                    </ul>
+                </div>
+
+            </nav>
         </div>
     </div>
-    <div id="recherche">
-        <input type="search" placeholder="recherche">
+    <div class="bg-image" style="background-image: url(asset/image/images_the_district/bg2.jpeg); height: auto">
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="col col-lg-1">
+                    <input type="search" placeholder="recherche">
+                </div>
+            </div>
+        </div>
     </div>
-    <div id="categorie_1">
-        <img src="asset/image/images_the_district/categoryasian_food_cat.jpg" alt="asian food catégorie">
-        <img src="asset/image/images_the_district/category/burger_cat.jpg" alt="burger catégorie">
-        <img src="asset/image/images_the_district/category/pasta_cat.jpg" alt="pasta Catégorie">
+
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-lg-2">
+                <img src="asset/image/images_the_district/category/asian_food_cat.jpg" alt="asian food catégorie"
+                    class="img-fluid" style="height: fit-content;">
+            </div>
+            <div class="col-lg-2">
+                <img src="asset/image/images_the_district/category/burger_cat.jpg" alt="burger catégorie"
+                    class="img-fluid">
+            </div>
+            <div class="col-lg-2">
+                <img src="asset/image/images_the_district/category/pasta_cat.jpg" alt="pasta Catégorie"
+                    class="img-fluid">
+            </div>
+        </div>
     </div>
     <div id="categorie_2">
         <img src="asset/image/images_the_district/category/pizza_cat.jpg" alt="pizza catégorie">
@@ -43,9 +94,16 @@
     <div id="reseaux">
         <img src="asset/image/images_the_district/the_district_brand/facebook_cover_photo_1.png" alt="profil facebook">
     </div>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -13,12 +13,12 @@
   background-size: cover;
 }
 .zoom {
-    width: 18vw;
-    height: 25vw;
-    transition-duration: 1s;
+    transition: transform 1s;
 }
 
 .zoom:hover {
-    width: 22vw;
-    height: 30vw;
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform:scale(1.1);
+ 
 }

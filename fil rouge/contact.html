@@ -64,23 +64,26 @@
         <!-- formulaire -->
 
         <div class="container text-white">
-            <form>
+            <form method="get" id="coordonnées">
                 <div class="form-check">
                     <div class="form-row">
                         <div class="col-5 ml-5">
                             <div class="form-group">
+
                                 <label for="nom">Nom</label>
-                                <input type="text" class="form-control" name="Nom" id="Nom"
+                                <input type="text" class="form-control" name="Nom" id="nom"
                                     placeholder="Saisir votre nom">
+                                <span id="nomError"></span>
                             </div>
 
                         </div>
                         <div class="col-5 ml-5">
 
                             <div class="form-group">
-                                <label for="prenom">prenom</label>
+                                <label for="prenom">Prenom</label>
                                 <input type="text" class="form-control" name="prenom" id="prenom"
                                     placeholder="Saisir votre prénom">
+                                <span id="prenomError"></span>
                             </div>
 
                         </div>
@@ -93,6 +96,7 @@
                                 <label for="email">Email</label>
                                 <input type="email" class="form-control" name="email" id="email"
                                     placeholder="Saisir votre Email">
+                                <span id="mailError"></span>
                             </div>
 
                         </div>
@@ -102,6 +106,7 @@
                                 <label for="numero">Numero</label>
                                 <input type="text" class="form-control" name="numero" id="numero"
                                     placeholder="Saisir votre numéro de téléphone">
+                                <span id="numeroError"></span>
                             </div>
 
 
@@ -115,7 +120,7 @@
                         <textarea id="exampleFormControlTextarea1" class="w-100"></textarea>
                     </div>
                     <div class="col-11 text-right mt-5">
-                        <button type="submit" class="btn btn-primary ">Envoyer</button>
+                        <button type="submit" class="btn btn-primary" id="submit">Envoyer</button>
                     </div>
                 </div>
             </form>
@@ -145,6 +150,7 @@
 
         </div>
     </div>
+    <script src="asset/javascript/fil_rouge.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
@@ -154,6 +160,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+    
 </body>
 
 </html>

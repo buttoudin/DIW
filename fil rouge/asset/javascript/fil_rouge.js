@@ -1,20 +1,22 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Sélection du formulaire
+    // Formulaire
     const formulaire = document.getElementById('coordonnées');
 
-    // Sélection des champs du formulaire
+    // Champs du formulaire
     const nomChamp = document.getElementById('nom');
     const prenomChamp = document.getElementById('prenom');
     const emailChamp = document.getElementById('email');
     const numeroChamp = document.getElementById('numero');
+    const demandeChamp = document.getElementById('demande');
 
-    // Sélection des zones d'erreur
+    //Zones d'erreur
     const nomError = document.getElementById('nomError');
     const prenomError = document.getElementById('prenomError');
     const emailError = document.getElementById('mailError');
     const numeroError = document.getElementById('numeroError');
+    const demandeError = document.getElementById('demandeError');
 
-    // Fonction de validation du nom
+    // Validation du nom
     function validateNom() {
         const nom = nomChamp.value.trim();
         const regexLettres = /^[a-zA-Z]+$/;
@@ -32,12 +34,12 @@ document.addEventListener('DOMContentLoaded', function () {
             return false; 
         }
          else {
-            nomError.textContent = ''; // Effacer le message d'erreur
+            nomError.textContent = ''; 
             return true;
         }
     }
 
-    // Fonction de validation du prénom
+    //Validation du prénom
     function validatePrenom() {
         const prenom = prenomChamp.value.trim();
         const regexLettres = /^[a-zA-Z]+$/;
@@ -54,13 +56,13 @@ document.addEventListener('DOMContentLoaded', function () {
             return false; 
         }
         else {
-            prenomError.textContent = ''; // Effacer le message d'erreur
+            prenomError.textContent = ''; 
             return true;
         }
         
     }
 
-    // Fonction de validation de l'email
+    // Validation de l'email
     function validateEmail() {
         const email = emailChamp.value.trim();
         const regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
@@ -78,12 +80,12 @@ document.addEventListener('DOMContentLoaded', function () {
             return false;
         } 
         else {
-            emailError.textContent = ''; // Effacer le message d'erreur
+            emailError.textContent = ''; 
             return true;
         }
     }
 
-    // Fonction de validation du numéro de téléphone
+    // Validation du numéro de téléphone
     function validateNumero() {
         const numero = numeroChamp.value.trim();
 
@@ -94,21 +96,37 @@ document.addEventListener('DOMContentLoaded', function () {
             return false;
         } 
         else {
-            numeroError.textContent = ''; // Effacer le message d'erreur
+            numeroError.textContent = ''; 
+            return true;
+        }
+    }
+      // Validation du nom
+      function validateDemande() {
+        const demande = demandeChamp.value.trim();
+
+        if (demande === '') {
+            demandeError.textContent = 'Veuillez saisir votre demande.';
+            demandeError.style.color = 'red';
+            demandeError.style.backgroundColor = 'rgba(255, 255, 255, 0.75)';
+            return false;
+        }
+       
+         else {
+            demandeError.textContent = ''; 
             return true;
         }
     }
 
-    // Écouteur d'événement pour soumettre le formulaire
     formulaire.addEventListener('submit', function (e) {
         // Valider chaque champ
         const isNomValid = validateNom();
         const isPrenomValid = validatePrenom();
         const isEmailValid = validateEmail();
         const isNumeroValid = validateNumero();
+        const isDemandeValid = validateDemande();
 
         // Empêcher l'envoie du formulaire si l'un des champs est invalide
-        if (!isNomValid || !isPrenomValid || !isEmailValid || !isNumeroValid) {
+        if (!isNomValid || !isPrenomValid || !isEmailValid || !isNumeroValid || !isDemandeValid ) {
             e.preventDefault();
         }
     });

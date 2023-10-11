@@ -49,9 +49,9 @@
 height: 10rem;
 width: 100%;
 object-fit: cover;
-position: fixed;
+position: absolute;
 left: 0;
 right: 0;
-top: 5rem;
+top: 0;
 bottom: 0;
 }

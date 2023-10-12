@@ -30,7 +30,7 @@ $email = $form['form'][1]['email'];
 $numero = $form['form'][1]['numéro'];
 $demande = $form['form'][1]['demande'];
 
-$formulaire = "Nom: " . $nom . " Prénom: " . $prenom . " Email: " . $email . " Numéro: " . $numero . " Demande: " . $demande;
+$formulaire = "Nom: " . $nom . "\nPrénom: " . $prenom . "\nEmail: " . $email . "\nNuméro: " . $numero . "\nDemande: " . $demande;
 
 $fp = fopen($nom_fichier, "x+");
 fputs($fp, $formulaire);

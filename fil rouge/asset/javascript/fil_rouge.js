@@ -1,22 +1,22 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Formulaire
+    
     const formulaire = document.getElementById('coordonnées');
 
-    // Champs du formulaire
+   
     const nomChamp = document.getElementById('nom');
     const prenomChamp = document.getElementById('prenom');
     const emailChamp = document.getElementById('email');
     const numeroChamp = document.getElementById('numero');
     const demandeChamp = document.getElementById('demande');
 
-    //Zones d'erreur
+   
     const nomError = document.getElementById('nomError');
     const prenomError = document.getElementById('prenomError');
     const emailError = document.getElementById('mailError');
     const numeroError = document.getElementById('numeroError');
     const demandeError = document.getElementById('demandeError');
 
-    // Validation du nom
+ 
     function validateNom() {
         const nom = nomChamp.value.trim();
         const regexLettres = /^[a-zA-Z]+$/;
@@ -39,7 +39,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    //Validation du prénom
     function validatePrenom() {
         const prenom = prenomChamp.value.trim();
         const regexLettres = /^[a-zA-Z]+$/;
@@ -62,7 +61,6 @@ document.addEventListener('DOMContentLoaded', function () {
         
     }
 
-    // Validation de l'email
     function validateEmail() {
         const email = emailChamp.value.trim();
         const regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
@@ -85,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // Validation du numéro de téléphone
+    
     function validateNumero() {
         const numero = numeroChamp.value.trim();
 
@@ -100,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function () {
             return true;
         }
     }
-      // Validation du nom
+    
       function validateDemande() {
         const demande = demandeChamp.value.trim();
 
@@ -118,14 +116,14 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     formulaire.addEventListener('submit', function (e) {
-        // Valider chaque champ
+       
         const isNomValid = validateNom();
         const isPrenomValid = validatePrenom();
         const isEmailValid = validateEmail();
         const isNumeroValid = validateNumero();
         const isDemandeValid = validateDemande();
 
-        // Empêcher l'envoie du formulaire si l'un des champs est invalide
+       
         if (!isNomValid || !isPrenomValid || !isEmailValid || !isNumeroValid || !isDemandeValid ) {
             e.preventDefault();
         }

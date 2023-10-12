@@ -35,4 +35,6 @@ $formulaire = "Nom: " . $nom . " Prénom: " . $prenom . " Email: " . $email . " 
 $fp = fopen($nom_fichier, "x+");
 fputs($fp, $formulaire);
 fclose($fp);
+echo "Information envoyé avec succés";
+echo ' <input type="button" value="back" onclick="history.go(-1)">';
 ?>
